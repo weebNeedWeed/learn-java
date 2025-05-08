@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: security
+  datasource:
+    url: jdbc:postgresql://ep-sparkling-smoke-a14rva3r-pooler.ap-southeast-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_T8Dz1BleHERU&sslmode=require
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  profiles:
+    active:
+      - prod
+      - default
+
+server:
+  ssl:
+    enabled: true
+    key-store: ./mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+
+logging:
+  file:
+    path: ./
+    name: TacoCloud.log
+  level:
+    root: WARN
+    org.springframework.boot: DEBUG
+
+greeting:
+  welcome: Hello ${spring.application.name}
+
+taco:
+  orders:
+    page-size: 20
