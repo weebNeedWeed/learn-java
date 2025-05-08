@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sd-jpa
+  datasource:
+    url: jdbc:postgresql://ep-sparkling-smoke-a14rva3r-pooler.ap-southeast-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_T8Dz1BleHERU&sslmode=require
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true

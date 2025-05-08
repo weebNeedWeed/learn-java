@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <form method="post" th:action="@{/events/{clubId}/new(clubId=${clubId})}" th:object="${event}">
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text"
+                       id="name"
+                       th:field="*{name}"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="type">type</label>
+                <input type="text"
+                       id="type"
+                       th:field="*{type}"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="photoUrl">photoUrl</label>
+                <input type="text"
+                       id="photoUrl"
+                       th:field="*{photoUrl}"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start time</label>
+                <input type="datetime-local"
+                       id="startTime"
+                       th:field="*{startTime}"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="endTime">end time</label>
+                <input type="datetime-local"
+                       id="endTime"
+                       th:field="*{endTime}"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
