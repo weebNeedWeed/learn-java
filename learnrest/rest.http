@@ -1,0 +1,28 @@
+### POST /tacos
+POST http://localhost:8080/api/tacos
+Accept: application/json
+Content-Type: application/json
+
+{
+  "tacoName": "hello world"
+}
+
+###
+PUT http://localhost:8080/api/tacos/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "tacoName": "hello world"
+}
+
+###
+PATCH http://localhost:8080/api/tacos/1
+Content-Type: application/json
+
+{
+  "tacoName": "hello world"
+}
+
+###
+DELETE http://localhost:8080/api/tacos/1
